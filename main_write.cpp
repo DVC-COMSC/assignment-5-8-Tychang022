@@ -16,7 +16,7 @@ int main()
 	double average, score, sum = 0;
 	string studentName;
 do{
-	cout << "Enter the number of students: " ;
+	ofs << "Enter the number of students: " ;
 	cin >> N;
 	if (N < 0)
 		cout << "Invalid Input. Please try again\n ";		
@@ -27,6 +27,7 @@ do{
 		sum = 0;
 		cout << "What is the name of the student \n";
 		cin >> studentName;
+		ofs << studentName << " ";
 		for (int j=0; j < M; j++)
 		{
 			cout << "What is the score for " << studentName << endl;
@@ -34,7 +35,7 @@ do{
 			sum += score;
 		}
 		average = sum / M;
-		cout << studentName << "sum: " << sum << " average: " << average << endl;
+		ofs << sum << " " << average << endl;
 	
 	}
 	ofs.close(); 
